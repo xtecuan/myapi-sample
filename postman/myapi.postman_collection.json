@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "c9a54bba-8904-40f8-9ad9-84d463f313a5",
+		"name": "myapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create personas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"apellidos\": \"Sample\",\n    \"email\": \"jessicavaquero@gmail.com\",\n    \"nombres\": \"Human\",\n    \"usuario\": \"Human\"\n}\n\n"
+				},
+				"url": {
+					"raw": "https://localhost:8443/myapi/resources/personas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"myapi",
+						"resources",
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update personas",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"email\": \"jessicagabrielavaquero22@gmail.com\",\n    \"usuario\": \"jessica\"\n\n   \n}"
+				},
+				"url": {
+					"raw": "https://localhost:8443/myapi/resources/personas/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"myapi",
+						"resources",
+						"personas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete persons",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8443/myapi/resources/personas/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"myapi",
+						"resources",
+						"personas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8443/myapi/resources/personas/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"myapi",
+						"resources",
+						"personas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get personas by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8443/myapi/resources/personas/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"myapi",
+						"resources",
+						"personas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
