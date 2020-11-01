@@ -10,3 +10,5 @@ CREATE TABLE public.personas (
 	usuario varchar(15) NOT NULL
 );
 
+GRANT ALL ON TABLE personas TO sample;
+GRANT ALL ON SEQUENCE public.personas_id_seq TO sample;
