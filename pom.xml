@@ -134,6 +134,7 @@
       </build>
       <properties>
         <quarkus.package.type>native</quarkus.package.type>
+        <!--<quarkus.native.additional-build-args>-J-Djavax.net.ssl.trustStore=/home/xtecuan/Projects/myapi-sample/src/main/resources/mykeystore.jks,-J-Djavax.net.ssl.trustStorePassword=secret</quarkus.native.additional-build-args>-->
       </properties>
     </profile>
   </profiles>
