@@ -10,3 +10,4 @@ CREATE TABLE public.personas (
 	usuario varchar(15) NOT NULL
 );
 
+GRANT ALL ON TABLE personas TO sample;

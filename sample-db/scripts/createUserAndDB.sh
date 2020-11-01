@@ -7,4 +7,4 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
 	GRANT ALL PRIVILEGES ON DATABASE sample TO sample;
 EOSQL
 
-psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "sample" < /docker-entrypoint-initdb.d/tables.sql
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "sample" < /sql/tables.sql
