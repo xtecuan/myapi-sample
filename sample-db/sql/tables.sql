@@ -11,3 +11,4 @@ CREATE TABLE public.personas (
 );
 
 GRANT ALL ON TABLE personas TO sample;
+GRANT ALL ON SEQUENCE public.personas_id_seq TO sample;
