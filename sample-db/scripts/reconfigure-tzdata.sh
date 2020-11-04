@@ -14,7 +14,7 @@ rm /etc/localtime
 apt-get update
 apt-get install -y dialog apt-utils
 apt-get install -y tzdata
-apt-get install -y dos2unix gzip
+apt-get install -y dos2unix gzip nfs-common
 
 echo "America/El_Salvador" > /etc/timezone    
 dpkg-reconfigure -f noninteractive tzdata

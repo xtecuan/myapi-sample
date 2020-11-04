@@ -1,5 +1,3 @@
 #!/bin/ash
 
-source ./env.sh
-
-docker logs $CONTAINER
+docker logs sampledb-container-dev
