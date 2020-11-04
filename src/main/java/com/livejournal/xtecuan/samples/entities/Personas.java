@@ -2,8 +2,7 @@ package com.livejournal.xtecuan.samples.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Basic;
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -37,6 +36,8 @@ public class Personas implements Serializable {
     @Size(max = 15)
     @NotNull
     private String usuario;
+
+    private Double nota;
 
     public Personas() {
     }
@@ -81,6 +82,14 @@ public class Personas implements Serializable {
         this.usuario = usuario;
     }
 
+    public Double getNota() {
+        return nota;
+    }
+
+    public void setNota(Double nota) {
+        this.nota = nota;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -117,7 +126,4 @@ public class Personas implements Serializable {
         sb.append('}');
         return sb.toString();
     }
-    
-    
-
 }
