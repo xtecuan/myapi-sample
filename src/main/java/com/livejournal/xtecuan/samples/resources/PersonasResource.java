@@ -90,6 +90,10 @@ public class PersonasResource {
        if(persona.getApellidos()!=null && !persona.getApellidos().equals("")){
            entity.setApellidos(persona.getApellidos());
        }
+       if(persona.getNota()!=null){
+           entity.setNota(persona.getNota());
+       }
+
         
         personasRepository.persist(entity);
 
