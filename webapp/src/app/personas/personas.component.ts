@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Persona} from '../personas/persona';
 import {PERSONAS} from '../personas/mock-personas';
 import {PersonaService} from '../services/persona.service';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-personas',
@@ -10,7 +11,7 @@ import {PersonaService} from '../services/persona.service';
 })
 export class PersonasComponent implements OnInit {
 
-  constructor(private personaService: PersonaService) { }
+  constructor(private personaService: PersonaService,private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.getPersonas();
@@ -29,6 +30,7 @@ export class PersonasComponent implements OnInit {
 
   onSelect(cpersona: Persona) : void{
     this.selectedPersona = cpersona;
+    this.messageService.add(`PersonasComponent: Selected persona id=${cpersona.id}`);
   }
 
   personas : Persona[];
