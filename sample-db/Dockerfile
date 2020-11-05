@@ -1,6 +1,7 @@
 FROM postgres:12.4
 RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
+#RUN mkdir -p /var/lib/postgresql/data && chmod 750 /var/lib/postgresql/data
 RUN mkdir -p /docker-entrypoint-initdb.d
 RUN mkdir -p /sql
 COPY ./scripts/reconfigure-tzdata.sh /tmp/
