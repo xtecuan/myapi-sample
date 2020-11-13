@@ -6,9 +6,34 @@
     <div><span>email: </span>{{persona.email}}</div>
     <div><span>nota: </span>{{persona.nota}}</div>
   
+
+    <div>
+      <label>Nombres:
+        <input [(ngModel)]="persona.nombres" placeholder="nombres" />
+      </label>
+    </div>
+    <div>
+      <label>Apellidos:
+        <input [(ngModel)]="persona.apellidos" placeholder="apellidos" />
+      </label>
+    </div>
+    <div>
+      <label>E-mail:
+        <input [(ngModel)]="persona.email" placeholder="email"/>
+      </label>
+    </div>
     <div>
       <label>usuario:
         <input [(ngModel)]="persona.usuario" placeholder="usuario" />
       </label>
     </div>
+    <div>
+      <label>Nota:
+        <input [(ngModel)]="persona.nota" placeholder="nota" />
+      </label>
+    </div>
+    
   </div>
+  <button (click)="save()">save</button>
+
+  <button (click)="goBack()">go back</button>

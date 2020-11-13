@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  personasBaseUrl : 'https://127.0.0.1:7777/myapi/resources/personas'
 };
 
 /*

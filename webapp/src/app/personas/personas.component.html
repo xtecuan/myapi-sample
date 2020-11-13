@@ -1,9 +1,17 @@
 
-<app-persona-detail [persona]="selectedPersona"></app-persona-detail>
+<!--<app-persona-detail [persona]="selectedPersona"></app-persona-detail>-->
 
 <h2>Personas List</h2>
-<ul class="personas">
+<!--<ul class="personas">
   <li *ngFor="let cpersona of personas"   [class.selected]="cpersona === selectedPersona" (click)="onSelect(cpersona)">
     <span class="badge">{{cpersona.id}}</span> {{cpersona.nombres}} {{cpersona.apellidos}}
+  </li>
+</ul>-->
+
+<ul class="personas">
+  <li *ngFor="let cpersona of personas">
+    <a routerLink="/detail/{{cpersona.id}}">
+      <span class="badge">{{cpersona.id}}</span> {{cpersona.nombres}} {{cpersona.apellidos}}
+    </a>
   </li>
 </ul>

@@ -12,7 +12,7 @@ CREATE TABLE public.personas (
 );
 
 -- Permissions
-
+ALTER TABLE public.personas ADD CONSTRAINT personas_pk PRIMARY KEY (id);
 ALTER TABLE public.personas OWNER TO sample;
 GRANT ALL ON TABLE public.personas TO sample;
 GRANT ALL ON TABLE personas TO sample;
